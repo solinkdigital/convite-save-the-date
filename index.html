@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Convite digital Save the Date">
+  <title>Save the Date</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="invite">
+    <video
+      id="inviteVideo"
+      class="invite-video"
+      playsinline
+      preload="auto"
+      autoplay
+      muted
+      controlslist="nodownload noplaybackrate"
+    >
+      <source src="video/save-the-date.mp4" type="video/mp4">
+      O seu navegador não suporta vídeo HTML5.
+    </video>
+
+    <!-- Fallback para navegadores que bloqueiam autoplay com som -->
+    <button id="soundPrompt" class="sound-prompt hidden" type="button" aria-label="Ativar som">
+      <span class="sound-icon">🔊</span>
+      <span>Ativar som</span>
+    </button>
+
+    <!-- Camada de ações: permanece sobre o vídeo -->
+    <section id="actions" class="actions" aria-label="Confirmação de presença">
+      <div class="actions-card">
+        <p class="actions-title">Confirmação de presença</p>
+
+        <div class="action-row">
+          <button id="yesButton" class="action-button primary" type="button">
+            <span class="button-icon">✓</span>
+            <span>Vou estar presente</span>
+          </button>
+
+          <button id="noButton" class="action-button secondary" type="button">
+            <span class="button-icon">×</span>
+            <span>Não poderei comparecer</span>
+          </button>
+        </div>
+
+        <div id="contactChooser" class="contact-chooser" aria-hidden="true">
+          <p>Enviar confirmação para:</p>
+          <div class="contact-row">
+            <a id="groomLink" class="contact-button" href="#" target="_blank" rel="noopener">
+              <span>WhatsApp</span>
+              <strong>Noivo</strong>
+            </a>
+            <a id="brideLink" class="contact-button" href="#" target="_blank" rel="noopener">
+              <span>WhatsApp</span>
+              <strong>Noiva</strong>
+            </a>
+          </div>
+        </div>
+
+        <p id="statusMessage" class="status-message" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
